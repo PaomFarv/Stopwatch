@@ -11,7 +11,7 @@ time_label = tk.Label(root,text = "00:00:00",font=("Impact",90),bg="Black",fg="W
 time_label.pack(padx = 10,pady=10)
 
 button_style = {
-    "font": ("Segoe UI Black", 20, "bold"),
+    "font": ("Helvetica", 20, "bold"),
     "bg": "#4CAF50",  # Green background
     "fg": "white",  # White text
     "relief": "raised",  # Raised effect for 3D appearance
@@ -42,7 +42,7 @@ def update_time():
 def start():
     global start_time,is_running
     if not is_running:
-        start_time = time.time() #- elapsed_time
+        start_time = time.time() - elapsed_time
         is_running = True
         update_time()
 
